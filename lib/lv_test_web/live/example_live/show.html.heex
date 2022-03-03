@@ -1,6 +1,8 @@
 <form name="form">
-  <input type="text" name="input" id="input" />
+  <input type="text" id="my-input" />
 </form>
 
-<button phx-click={ JS.set_attribute({"value", "hello"}, to: "#input") } value={ "hello" }>Hello</button>
-<button phx-click={ JS.set_attribute({"value", "world"}, to: "#input") } value={ "world" }>World</button>
+<button phx-click={ JS.set_attribute({"value", "hello"}, to: "#my-input") }>Add "Hello"</button>
+<button phx-click={ JS.set_attribute({"value", "world"}, to: "#my-input") }>Append "World"</button>
+
+<button phx-click={ JS.set_attribute({"value", ""}, to: "#my-input") }>Reset Input</button>
